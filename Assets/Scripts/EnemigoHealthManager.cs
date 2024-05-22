@@ -11,4 +11,16 @@ public class EnemigoHealthManager : MonoBehaviour
         salud-=pupa;
         slider.value = salud;
     }
+
+    if salud <= 0 then
+
+    Mutant_DeathAnimation:Play();
+
+    //Standing React Death Forward: play;
+
+    //if {salud = 0}{Animation.Parasite}
+    
+    //{Destroy(GameObject)}
+
+
 }
