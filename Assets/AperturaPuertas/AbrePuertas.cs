@@ -8,7 +8,7 @@ public class AbrePuertas : MonoBehaviour
     public Animator animatorPuerta;
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag(tagPlayer))
+        if (other.gameObject.tag!=null && other.gameObject.CompareTag(tagPlayer))
         {
             animatorPuerta.enabled = true;
         }
