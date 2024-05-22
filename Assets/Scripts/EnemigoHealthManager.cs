@@ -10,11 +10,14 @@ public class EnemigoHealthManager : MonoBehaviour
     public void HacerPupa(int pupa){
         salud-=pupa;
         slider.value = salud;
+        if (salud <= 0) 
+        {
+            GetComponent<Animator>().SetTrigger("Die");
+        }
+   
     }
 
-    if salud <= 0 then
 
-    Mutant_DeathAnimation:Play();
 
     //Standing React Death Forward: play;
 
