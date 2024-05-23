@@ -18,6 +18,11 @@ public class PlayerHealthManager : MonoBehaviour
         Salud-=pupa;
         imagenSalud.fillAmount=Salud/100f;
 
+    //{
+       // gameManager.DecrementarSalud(pupa);
+        //if (gameManager.salud == 0)
+        //{
+
         if (Salud <= 0) 
         {
             GetComponent<Animator>().SetTrigger("PlayerDeath");
