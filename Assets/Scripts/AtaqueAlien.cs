@@ -5,12 +5,12 @@ using UnityEngine;
 public class AtaqueAlien : MonoBehaviour
 {
     // Start is called before the first frame update
-    public int golpe = 1;
+    public int GolpeGarra = 1;
     void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            collision.gameObject.GetComponent<PlayerHealthManager>().RecibirPupa(golpe);
+            collision.gameObject.GetComponent<PlayerHealthManager>().RecibirPupa(GolpeGarra);
         }
 
     }
