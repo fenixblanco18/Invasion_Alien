@@ -24,11 +24,7 @@ public class EnemigoHealthManager : MonoBehaviour
 
 
 
-    //Standing React Death Forward: play;
-
-    //if {salud = 0}{Animation.Parasite}
-    
-    //{Destroy(GameObject)}
+   
 
 
 }
