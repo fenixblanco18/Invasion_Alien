@@ -6,7 +6,8 @@ public class ObjetoParaVida : MonoBehaviour
 {
     // Start is called before the first frame update
    
-    [Header("Daño infringido en cada lapso de tiempo")]
+    [Header("Restablecer Salud Player")]
+    public int Curar;
     public int danyo;
     [Header("Tiempo transcurrido entre cada incremento/decremento daño")]
     public float frecuencia;
