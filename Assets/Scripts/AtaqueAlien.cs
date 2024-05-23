@@ -6,8 +6,9 @@ public class AtaqueAlien : MonoBehaviour
 {
     // Start is called before the first frame update
     public int GolpeGarra = 1;
-    void OnCollisionEnter(Collision collision)
+    void OnTriggerEnter(Collider collision)
     {
+        print("Trigger");
         if (collision.gameObject.CompareTag("Player"))
         {
             collision.gameObject.GetComponent<PlayerHealthManager>().RecibirPupa(GolpeGarra);
