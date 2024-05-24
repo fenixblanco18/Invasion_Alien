@@ -6,8 +6,10 @@ using UnityEngine.UI;
 
 public class PlayerHealthManager : MonoBehaviour
 {
+    public GameObject canvasGameOver;
     public Image imagenSalud;
     private GameManager gameManager;
+    private bool pantallaGameOverActivada = false;
     void Start(){
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();    
     }
@@ -29,9 +31,17 @@ public class PlayerHealthManager : MonoBehaviour
             GetComponent<CharacterController>().enabled = false;
             GetComponent<FPSController>().enabled = false;
             GetComponent<Arma>().enabled = false;
-            
+            if (pantallaGameOverActivada==false)
+            {
+                pantallaGameOverActivada=true;
+                Invoke("ActivarPantallaGameOver",3);
+            }
             
         }
+    }
+    void ActivarPantallaGameOver()
+    {
+        canvasGameOver.SetActive(true);
     }
 
 }
