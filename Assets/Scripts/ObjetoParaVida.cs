@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class ObjetoParaVida : MonoBehaviour
 {
-    // Start is called before the first frame update
-   
     [Header("Restablecer Salud Player")]
     public int Curar;
     public int danyo;
@@ -13,20 +11,28 @@ public class ObjetoParaVida : MonoBehaviour
     public float frecuencia;
 
     private Transform transformPlayer;
-    public void OnTriggerEnter(Collider c){
-        if (c.gameObject.CompareTag("Player")) 
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player"))
         {
-            transformPlayer=c.gameObject.transform;
-            InvokeRepeating("HacerDanyo",0,frecuencia);
-        }  
-    }
-    public void OnTriggerExit(Collider c){
-        if (c.gameObject.CompareTag("Player")) 
-        {
-            CancelInvoke("HacerDanyo");
+            transformPlayer = other.gameObject.transform;
+            InvokeRepeating("HacerDanyo", 0, frecuencia);
         }
     }
-    private void HacerDanyo(){
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            CancelInvoke("HacerDanyo");
+            // Aquí puedes destruir el objeto una vez que el jugador se aleje.
+            Destroy(gameObject);
+        }
+    }
+
+    private void HacerDanyo()
+    {
         transformPlayer.gameObject.GetComponent<PlayerHealthManager>()?.RecibirPupa(danyo);
     }
 }

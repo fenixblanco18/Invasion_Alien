@@ -729,8 +729,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1193556393}
-        m_TargetAssemblyTypeName: UnityEngine.MonoBehaviour, UnityEngine
-        m_MethodName: CancelInvoke
+        m_TargetAssemblyTypeName: IniciarJuego, Assembly-CSharp
+        m_MethodName: IniciarJuegos
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
