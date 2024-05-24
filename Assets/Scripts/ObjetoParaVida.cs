@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//Este Script esta configurado para reducir la salud del Player.
+//Para que restaure la vida al Player, pone un numero negativo.
 public class ObjetoParaVida : MonoBehaviour
 {
     [Header("Restablecer Salud Player")]
