@@ -17,7 +17,8 @@ public class EnemigoHealthManager : MonoBehaviour
             GetComponent<Animator>().SetTrigger("Die");
             GetComponent<NPCSmartEnemy>().enabled = false;
             GetComponent<NavMeshAgent>().enabled = false;
-            
+            GetComponent<AudioSource>().enabled = false; 
+            //Destroy(gameObject, salud);            
         }
    
     }
