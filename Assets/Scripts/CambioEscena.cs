@@ -4,14 +4,21 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class CambioEscena : MonoBehaviour
-{
-   
-    void OnTriggerEnter(Collider c){
 
-        SceneManager.LoadScene(3);
-        
-     }
+   {
+    // Start is called before the first frame update
+    void OnTriggerEnter(Collider c)
+    {
+        if (c.transform.CompareTag("Player"))
+        {
+            SceneManager.LoadScene(3);
+            //SceneManager.LoadScene("ExteriorScene");
+        }
+
+    }
 }
+
+  
 
 
 
