@@ -18,7 +18,8 @@ public class EnemigoHealthManager : MonoBehaviour
             GetComponent<NPCSmartEnemy>().enabled = false;
             GetComponent<NavMeshAgent>().enabled = false;
             GetComponent<AudioSource>().enabled = false; 
-            //Destroy(gameObject, salud);            
+            //Destroy(gameObject, salud);
+            Destroy(GetComponentInChildren<Canvas>().gameObject);
         }
    
     }
