@@ -29,7 +29,10 @@ public class ObjetoParaVida : MonoBehaviour
         {
             CancelInvoke("HacerDanyo");
             // Aquí puedes destruir el objeto una vez que el jugador se aleje.
-            Destroy(gameObject);
+            if (transformPlayer.gameObject.GetComponent<PlayerHealthManager>()?.Salud<transformPlayer.gameObject.GetComponent<PlayerHealthManager>()?.SaludMaxima)
+            {
+                Destroy(gameObject);
+            }
         }
     }
 
